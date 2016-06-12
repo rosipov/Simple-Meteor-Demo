@@ -1,0 +1,39 @@
+<head>
+  <title>Demo</title>
+  <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+</head>
+
+<body>
+  	<div id="tblContainer" style="padding:5vh;">
+	  <h2>List of Devices</h2>
+		<table class="table table-bordered table-striped table-responsive">
+			<thead>
+				<th>User Agent</th>
+				<th>Device/Browser Name</th>
+				<th>Form Factor</th>
+				<th># of Cores</th>
+				<th>Coordinates</th>
+			</thead>
+			<tbody>
+				{{#each devices}}
+	 		 		{{> devicesRow}}
+	 		 	{{/each}}
+			</tbody>
+		</table>
+	  {{> devicesBtn}}
+	</div>
+</body>
+
+<template name="devicesBtn">
+  <button>Click Me</button>
+</template>
+
+<template name="devicesRow">
+<tr>
+	<td>{{userAgent}}</td>
+	<td>{{deviceName}}</td>
+	<td>{{formFactor}}</td>
+	<td>{{numberCores}}</td>
+	<td>{{coords}}</td>
+</tr>
+</template>
