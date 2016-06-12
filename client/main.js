@@ -9,7 +9,7 @@ Meteor.startup(function(){
 	if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(function(position){
 			//console.log(position.coords.latitude + "," + position.coords.longitude);
-			coords = position.coords.latitude + "," + position.coords.latitude; //set our coordinates value
+			coords = position.coords.latitude + "," + position.coords.longitude; //set our coordinates value
 		}, function(){ //Fall back value if geolocation was denied or unsupported
 			coords = "Location Not Detected";
 		});
